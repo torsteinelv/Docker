@@ -1,9 +1,6 @@
-ARG sourceimage=freqtradeorg/freqtrade
-ARG sourcetag=stable
+FROM freqtradeorg/freqtrade:stable
 
-FROM ${sourceimage}:${sourcetag}
-
-
+# Install required Python packages
 RUN pip install --no-cache-dir \
     scikit-learn==1.5.1 \
     joblib==1.4.2 \
