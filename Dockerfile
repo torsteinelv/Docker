@@ -1,4 +1,5 @@
 FROM freqtradeorg/freqtrade:stable
 
-# Install additional dependencies
-RUN pip install xgboost lightgbm torch catboost sb3_contrib
+# Update pip and install dependencies
+RUN pip install --upgrade pip \
+    && pip install xgboost lightgbm torch catboost sb3_contrib
